@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Domain.Services
+namespace Application.User
 {
-    class UserServices
+    class UserApplication
     {
     }
 }
