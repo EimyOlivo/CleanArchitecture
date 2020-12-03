@@ -4,13 +4,13 @@ using System.Text;
 
 namespace Domain.Entities
 {
-    class Product
+   public class Product
     {
-        int Id;
-        string Nombre;
-        int precio;
-        int Id_Categoria;
-        string Estado;
+        public int Id { get; set; }
+        public string Nombre { get; set; }
+        public int precio { get; set; }
+        public int Id_Categoria { get; set; }
+        public string Estado { get; set; }
 
         public Product(int id, string nombre, int precio, int id_categoria, string estado)
         {

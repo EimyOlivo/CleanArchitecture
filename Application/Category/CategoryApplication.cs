@@ -26,7 +26,7 @@ namespace Application.Categories
 
         public void crearCategoria(Category category)
         {
-            throw new NotImplementedException();
+            categoryService.crearCategoria(category);
         }
     }
 }

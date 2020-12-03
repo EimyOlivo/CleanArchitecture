@@ -10,36 +10,21 @@ using System.Web.Http;
 
 namespace Presentation.Controllers
 {
-    public class ValuesController : ApiController
+   
+    public class CategoryController : ApiController
     {
         ICategoryApplication categoryApplication = new CategoryApplication();
-
-        // GET api/values
+        // GET api/<controller>
         public IEnumerable<Category> Get()
         {
             var categorias = categoryApplication.buscarCategoria();
             return categorias;
         }
 
-        // GET api/values/5
-        public string Get(int id)
-        {
-            return "value";
-        }
-
         // POST api/values
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Category categoria)
         {
-        }
-
-        // PUT api/values/5
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/values/5
-        public void Delete(int id)
-        {
+            categoryApplication.crearCategoria(categoria);
         }
     }
 }

@@ -37,7 +37,12 @@ namespace Infrastructure.Repository
         public void crearCategoria(Category category)
 
         {
-            throw new NotImplementedException();
+            var con = conexion.GetConnection();
+            con.Open();
+            SqlCommand cmd = new SqlCommand("insert into Category values ('"+category.Id+"', '"+category.Categoria+"', '"+category.Estado+"')", con);
+            var resultado = cmd.ExecuteNonQuery();
+            con.Close();
+
         }
     }
 }

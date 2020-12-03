@@ -13,6 +13,7 @@ namespace Domain.Entities
         public string Estado { get; set; }
 
         public Category() { 
+
         }
 
         public Category(int Id, string categoria,string estado)

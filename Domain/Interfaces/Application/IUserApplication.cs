@@ -1,10 +1,13 @@
-﻿using System;
+﻿using Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Domain.Interfaces.Application
 {
-    class IUserApplication
+    public interface IUserApplication
     {
+        void crearUser(User user);
+        List<User> buscarUser();
     }
 }

@@ -23,7 +23,8 @@ namespace Domain.Services
 
         public void crearCategoria(Category category)
         {
-            throw new NotImplementedException();
+            categoryRepository.crearCategoria(category);
         }
+
     }
 }

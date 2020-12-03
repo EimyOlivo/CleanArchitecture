@@ -4,13 +4,13 @@ using System.Text;
 
 namespace Domain.Entities
 {
-    class User
+    public class User
     {
-        int Id;
-        string Nombre;
-        string Apellido;
-        string Direccion;
-        string Estado;
+        public int Id { get; set; }
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public string Direccion { get; set; }
+        public string Estado { get; set; }
 
         public User(int id,string nombre,string apellido, string direccion, string estado)
         {

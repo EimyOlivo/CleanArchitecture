@@ -9,5 +9,6 @@ namespace Domain.Interfaces.Repository
     {
         void crearCategoria(Category category);
         List<Category> buscarCategoria();
+       
     }
 }
