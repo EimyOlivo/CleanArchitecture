@@ -1,4 +1,6 @@
 ﻿using Application.Categories;
+using Domain.Entities;
+using Domain.Interfaces.Application;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,13 +12,13 @@ namespace Presentation.Controllers
 {
     public class ValuesController : ApiController
     {
-        CategoryApplication categoryApplication = new CategoryApplication();
+        ICategoryApplication categoryApplication = new CategoryApplication();
 
         // GET api/values
-        public IEnumerable<string> Get()
+        public IEnumerable<Category> Get()
         {
             var categorias = categoryApplication.buscarCategoria();
-            return new string[] { "value1", "value2" };
+            return categorias;
         }
 
         // GET api/values/5

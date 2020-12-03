@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace Domain.Entities
 {
+
     public class Category
     {
-        int Id { get; set; }
-        string Categoria { get; set; }
-        string Estado { get; set; }
+        public int Id { get; set; }
+        public string Categoria { get; set; }
+        public string Estado { get; set; }
 
         public Category() { 
         }

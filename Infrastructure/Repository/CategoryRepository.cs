@@ -21,12 +21,12 @@ namespace Infrastructure.Repository
         {   
             var con = conexion.GetConnection();
             con.Open();
-            SqlCommand cmd = new SqlCommand("select Id, Categoria, Estado from Category", con);
+            SqlCommand cmd = new SqlCommand("select Id, Nombre, Estado from Category", con);
             var resultado = cmd.ExecuteReader();
             List<Category> categories = new List<Category>(); 
             while (resultado.Read())
             {
-                categories.Add(new Category((int)resultado["Id"], resultado["Categoria"].ToString(), resultado["Estado"].ToString()));
+                categories.Add(new Category((int)resultado["Id"], resultado["Nombre"].ToString(), resultado["Estado"].ToString()));
             }
             con.Close();
 
